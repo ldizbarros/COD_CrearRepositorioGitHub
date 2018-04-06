@@ -15,7 +15,7 @@ import org.kohsuke.github.GitHub;
 
 public class Metodos {
     
-    public static void crearRepositorio(String nuevoRepositorio) throws IOException{
+    public static void crearRepositorioRemoto(String nuevoRepositorio) throws IOException{
         GitHub github = GitHub.connect();
         GHCreateRepositoryBuilder builder;
         builder = github.createRepository(nuevoRepositorio);
@@ -50,5 +50,9 @@ public class Metodos {
         
         CommitCommand commit = git.commit();
         commit.setMessage(fraseCommit).call();
+    }
+    
+    public static void hacerPush(){
+        
     }
 }
