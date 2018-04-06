@@ -8,7 +8,7 @@ public class MavenProject {
 
     public static void main(String[] args) {
         try {
-            Metodos.crearRepositorio();
+            Metodos.crearRepositorio("RepositorioPrueba");
         } catch (IOException ex) {
             Logger.getLogger(MavenProject.class.getName()).log(Level.SEVERE, null, ex);
         }
