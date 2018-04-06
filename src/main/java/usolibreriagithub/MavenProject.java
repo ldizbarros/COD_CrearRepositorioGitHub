@@ -9,6 +9,7 @@ public class MavenProject {
 
     public static void main(String[] args) {
         
+        
             //        try {
 //            Metodos.crearRepositorio("RepositorioPrueba");
 //        } catch (IOException ex) {
@@ -20,9 +21,16 @@ public class MavenProject {
 //        } catch (GitAPIException ex) {
 //            Logger.getLogger(MavenProject.class.getName()).log(Level.SEVERE, null, ex);
 //        }
+//        try {
+//            Metodos.hacerCommit("/home/local/DANIELCASTELAO/ldizbarros/NetBeansProjects/JavaApplication125/.git", "PRUEBA COMMIT");
+//        } catch (GitAPIException | IOException ex) {
+//            Logger.getLogger(MavenProject.class.getName()).log(Level.SEVERE, null, ex);
+//        }
         try {
-            Metodos.hacerCommit("/home/local/DANIELCASTELAO/ldizbarros/NetBeansProjects/JavaApplication125/.git", "PRUEBA COMMIT");
-        } catch (GitAPIException | IOException ex) {
+            Metodos.inicializarRepositorio("/home/local/DANIELCASTELAO/ldizbarros/NetBeansProjects/JavaApplication126");
+        } catch (IOException ex) {
+            Logger.getLogger(MavenProject.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (GitAPIException ex) {
             Logger.getLogger(MavenProject.class.getName()).log(Level.SEVERE, null, ex);
         }
     } 

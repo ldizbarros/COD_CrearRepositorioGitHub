@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.eclipse.jgit.api.AddCommand;
 import org.eclipse.jgit.api.CommitCommand;
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.InitCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 import org.kohsuke.github.GHCreateRepositoryBuilder;
@@ -28,6 +29,12 @@ public class Metodos {
             .setCloneAllBranches(true)
             .call();
     }
+    
+    public static void inicializarRepositorio(String direcionRepositorio) throws IOException, GitAPIException {
+        InitCommand inicializar = new InitCommand();
+        inicializar.setDirectory(new File(direcionRepositorio))
+                .call();
+    } 
     
     public static void hacerCommit(String direcionRepositorio, String fraseCommit) throws IOException, GitAPIException{
         FileRepositoryBuilder constructorRepositorio = new FileRepositoryBuilder();
