@@ -1,6 +1,13 @@
 package usolibreriagithub;
 
+/**
+ * Clase Display
+ * @author ldizbarros
+ */
 public class Display {
+    /**
+     * Este metodo muestra por panatalla las opciones del menu
+     */
     public static void mostrarMenu(){
         System.out.println("****************** MENU ******************\n"
                          + "*   1)Crear Repositorio Remoto           *\n"
