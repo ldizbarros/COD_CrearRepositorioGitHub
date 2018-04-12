@@ -1,6 +1,7 @@
 package usolibreriagithub;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -39,7 +40,15 @@ public class Menu {
                             Logger.getLogger(MavenProject.class.getName()).log(Level.SEVERE, null, ex);
                         }
                         break;
-                case 5:
+                case 5: try {
+                            Metodos.hacerPush("/home/local/DANIELCASTELAO/ldizbarros/NetBeansProjects/JavaApplication133/.git", "https://github.com/ldizbarros/prueba.git");
+                        } catch (IOException ex) {
+                            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+                        } catch (URISyntaxException ex) {
+                            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+                        } catch (GitAPIException ex) {
+                            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+                        }
                         break;
                 case 0: break;
                 default: System.out.println("Opcion no valida");
